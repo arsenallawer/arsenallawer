@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo-favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>ArsenalLawer</title>
+    <link rel="preload" href="fonts/DisplayBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/DisplayRegular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/DisplayLight.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/Roboto.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="./js/main.js"></script>
+    <!-- Yandex.Metrika counter -->
+    <!--<script defer type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(95834528, "init", {
+             clickmap:true,
+             trackLinks:true,
+             accurateTrackBounce:true
+        });
+        //console.log('metrica');
+    </script>-->
+    <!--<noscript><div><img src="https://mc.yandex.ru/watch/95834528" style="position:absolute; left:-9999px;" alt="" /></div></noscript>-->
+    <!-- /Yandex.Metrika counter -->
+</head>
+
+<body class="page__body">
+    <div class="site-container">
+        <header class="header">
+    <div class="container">
+        <div class="header__container">
+            <div class="header__container-logo">
+                <div class="header__logo-svg logo-svg">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#logo-favicon"></use>
+                    </svg>
+                </div>
+                <div class="header__container-img">
+                    <span class="header__logo-title text">ArsenalLawer</span>
+                    <span class="header__logo-subtitle">Всё по закону!</span>
+                </div>
+            </div>
+            <a href="mailto:arsenallawer@gmail.com" class="header__container-email text hover__underline-center" data-hover="arsenallawer@gmail.com">arsenallawer@gmail.com</a>
+            <nav class="header__container-nav">
+                <a href="#box" class="header__nav-link text" data-hover="Услуги" data-scroll>Услуги</a>
+                <a href="about.html" class="header__nav-link text" data-hover="Обо мне" style="display: none;">Обо мне</a>
+                <a href="#about" class="header__nav-link text" data-hover="Обо мне">Обо мне</a>
+                <div class="switch">
+                    <input type="checkbox" id="switch__checkbox" />
+                    <label for="switch__checkbox" class="switch__label">
+                      <span class="switch__circle"></span>
+                    </label>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+        <main class="main">
+            <section class="hero">
+    <div class="hero__title container">
+      <h1 class="hero__title-myself section-title" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="1000">Профессиональная юридическая поддержка для вашего бизнеса</h1>
+        <div class="hero__myself-subtitle">
+            <canvas id="myCanvas" width="160" height="160"></canvas>
+            <!--<img loading="lazy" src="./img/photo.JPG" class="hero__icon-image" alt="Логотип">-->
+            <picture>
+              <source srcset="./img/photoHeroA.webp" type="image/webp">
+              <img loading="lazy" src="./img/photoHeroA.jpg" class="hero__icon-image" alt="Photo">
+            </picture>
+
+               <div class="hero__subtitle-content section-subtitle" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="3000">Предлагаю юридические услуги организациям в сфере договорного права (купля-продажа, подряд, возмездное оказание услуг, аренда), трудового права; представительства в государственных органах; аутсорсинг</div>
+        </div>
+    </div>
+    <div class="hero__title services">
+        <h2 class="hero__title-services section-title first">Юрист • Аутсорсинг • Консультации</h2>
+        <h2 class="hero__title-services section-title second">Договоры • Представительство • Сопровождение</h2>
+    </div>
+
+</section>
+
+            <section class="box__section">
+    <div class="container">
+        <div class="box" id="box">
+          <div class="box__row">
+            <div data-cell='1' class="box__row-cell">
+              <div class="box__row-cell-info">
+                <p class='box__row-cell-info-ep minText'>№ <span>01</span></p>
+              </div>
+              <div class="box__row-cell-info">
+                <p class='box__row-cell-info-title text'>Консультирование</p>
+              </div>
+              <div class="box__row-cell-info">
+                <div class="box__row-cell-info-sign"></div>
+              </div>
+              <!--<div class="box__row-cell-info box__row-cell-info--time">
+                <p>43 minutes</p>
+              </div>-->
+              <div class="box__row-cell-info--full">
+                <h1 class="box__row-cell-info--full-heading section-subtitle">Консультирование</h1>
+                <p class="box__row-cell-info--full-par text">
+                  Предварительная услуга <br> Проводится бесплатно
+                </p>
+              </div>
+            </div>
+            <div data-cell='2' class="box__row-cell">
+              <div class="box__row-cell-info">
+                <p class="box__row-cell-info-ep minText">№ <span>02</span></p>
+              </div>
+              <div class="box__row-cell-info">
+                <p class=' box__row-cell-info-title text'>Юридическое сопровождение</p>
+              </div>
+              <div class="box__row-cell-info">
+                <div class="box__row-cell-info-sign"></div>
+              </div>
+              <!--<div class="box__row-cell-info box__row-cell-info--time">
+                <p>44 minutes</p>
+              </div>-->
+              <div class="box__row-cell-info--full">
+                <h1 class="box__row-cell-info--full-heading section-subtitle">Юридическое сопровождение</h1>
+                <p class="box__row-cell-info--full-par text">Предоставляется возмездно <br> на основании отдельного соглашения</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="box__row">
+            <div data-cell='3' class="box__row-cell">
+              <div class="box__row-cell-info">
+                <p class=' box__row-cell-info-ep minText'>№ <span>03</span></p>
+              </div>
+              <div class="box__row-cell-info">
+                <p class=' box__row-cell-info-title text'>Представительство</p>
+              </div>
+              <div class="box__row-cell-info">
+                <div class="box__row-cell-info-sign"></div>
+              </div>
+              <!--<div class="box__row-cell-info box__row-cell-info--time">
+                <p>41 minutes</p>
+              </div>-->
+              <div class="box__row-cell-info--full">
+                <h1 class="box__row-cell-info--full-heading section-subtitle">Представительство</h1>
+                <p class="box__row-cell-info--full-par text">Предоставляется возмездно <br> осуществляется в рамках доверенности</p>
+              </div>
+            </div>
+            <div data-cell='4' class="box__row-cell">
+              <div class="box__row-cell-info">
+                <p class=' box__row-cell-info-ep minText'>№ <span>04</span></p>
+              </div>
+              <div class="box__row-cell-info">
+                <p class=' box__row-cell-info-title text'>Аутсорсинг</p>
+              </div>
+              <div class="box__row-cell-info">
+                <div class="box__row-cell-info-sign"></div>
+              </div>
+              <!--<div class="box__row-cell-info box__row-cell-info--time">
+                <p >42 minutes</p>
+              </div>-->
+              <div class="box__row-cell-info--full">
+                <h1 class="box__row-cell-info--full-heading section-subtitle">Аутсорсинг</h1>
+                <p class="box__row-cell-info--full-par text">Предоставляется возмездно <br> на основании отдельного соглашения</p>
+              </div>
+            </div>
+          </div>
+
+          <div data-content='1' class="box__content">
+            <div class="box__content-wrapper">
+              <div class="box__content-inner">
+                <div class="box__content-text">
+                  <h2 class='box__content-text-heading minText'>описание</h2>
+                  <p class='box__content-text-par minText'>Анализ ситуации</p>
+                  <p class='box__content-text-par minText'>Изучение применимых нормативных актов</p>
+                  <p class='box__content-text-par minText'>Правовые перспективы дела или вопроса</p>
+
+                  <h2 class='box__content-text-heading minText'>Способ оказания</h2>
+                  <ul class='list-reset box__content-text-list'>
+                    <li class='box__content-text-item minText'>одноразово</li>
+                    <li class='box__content-text-item minText'>по телефону или электронной почте</li>
+                    <li class='box__content-text-item minText'>возможен выезд к клиенту (с возмещением расходов)</li>
+                  </ul>
+
+                  <h2 class='box__content-text-heading minText'>Примечание</h2>
+                  <p class='box__content-text-par minText'>вы можете проконсультироваться, заполнив
+                  <a href="index.html#form">анкету</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div data-content='2' class="box__content">
+            <div class="box__content-wrapper">
+              <div class="box__content-inner">
+                <div class="box__content-text">
+                  <h2 class='box__content-text-heading minText'>описание</h2>
+                  <p class='box__content-text-par minText'>комплексная услуга</p>
+                  <p class='box__content-text-par minText'>непрерывная правовая поддержка Вашему бизнесу</p>
+                  <p class='box__content-text-par minText'>удалённый формат работы (иной формат обговаривается отдельно)</p>
+
+                  <h2 class='box__content-text-heading minText'>состав услуги</h2>
+                  <ul class='list-reset box__content-text-list'>
+                    <li class='box__content-text-item minText'><b>юридический анализ</b><i>: профессиальное консультирование по заданному вопросу; анализ документов и рекомендации по действиям клиента</i></li>
+                    <li class='box__content-text-item minText'><b>разработка и анализ соглашений и иных юридических документов</b><i>: составление, анализ, согласование юридически значимых документов (договоров, дополнительных соглашений, прочее), обеспечивая их законность и согласованность с интересами клиента</i></li>
+                    <li class='box__content-text-item minText'><b>мониторинг законодательства по определенным сферам</b><i>: отслеживание изменений и актуализация законодательства, связанных с деятельностью клиента; предоставление обновленной правовой информации о новых правилах и требованиях</i></li>
+                    <li class='box__content-text-item minText'><b>соблюдение юридических норм и стандартов</b><i>: помощь в отслеживании законодательства и регулирований в деятельности клиента в целях избежания правовых нарушений и минимизациии рисков</i></li>
+                    <li class='box__content-text-item minText'><b>конфиденциальность и защита персональных данных</b><i>: помощь в соблюдении требований конфиденциальности и защиты персональных данных</i></li>
+                  </ul>
+
+                  <h2 class='box__content-text-heading minText'>примечание</h2>
+                  <p class='box__content-text-par minText'>услуга оказывается согласно договору</p>
+                  <p class='box__content-text-par minText'>оплата услуги может осуществляться исходя из фактически оказанных услуг (от 2 000 рублей за соглашение) либо в рамках абонентского обслуживания (от 40 000 рублей в месяц)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div data-content='3' class="box__content">
+            <div class="box__content-wrapper">
+              <div class="box__content-inner">
+                <div class="box__content-text">
+                  <h2 class='box__content-text-heading minText'>описание</h2>
+                  <p class='box__content-text-par minText'>защита прав и интересов доверителя в судах судебной системы</p>
+                  <p class='box__content-text-par minText'>получение наиболее выгодного для клиента результата</p>
+
+                  <h2 class='box__content-text-heading minText'>состав услуги</h2>
+                  <ul class='list-reset box__content-text-list'>
+                    <li class='box__content-text-item minText'><b>консультирование и анализ ситуации</b><i>: ознакомление с делом, анализ правовых аспектов и рисков, обсуждение возможных стратегий защиты</i></li>
+                    <li class='box__content-text-item minText'><b>сбор необходимых документов</b><i>: сбор и анализ доказательств, подтверждающих аргументы и доводы доверителя</i></li>
+                    <li class='box__content-text-item minText'><b>подготовка и отправка (обеспечение отправки) процессуальных документов как на досудебной так и в судебной стадиях</b><i>: составление претензий, заявлений, жалоб, отправка (обеспечение отпарвки) процессуальных документов адресату</i></li>
+                    <li class='box__content-text-item minText'><b>отслеживание рассмотрения дела посредством доступных электронных площадок</b><i>: контроль рассмотрения отправленных процессуальных документов адресатом, отслеживание установленных сроков принятия решений по отправелнным документам</i></li>
+                    <li class='box__content-text-item minText'><b>осуществление процессуальных действий</b><i>: представление интересов доверителя в рамках судебного процесса либо в иных инстанциях согласно доверенности</i></li>
+                    <li class='box__content-text-item minText'><b>работа с противоположной стороной</b><i>: проведение переговоров в целях мирного урегулирования спора</i></li>
+                    <li class='box__content-text-item minText'><b>обеспечение исполнения решений</b><i>: отправка исполнительного документа на исполнение, контроль хода осуществления исполнительного производства (с момента его возбуждения до момента прекращения)</i></li>
+                  </ul>
+
+                  <h2 class='box__content-text-heading minText'>примечание</h2>
+                  <p class='box__content-text-par minText'>услуга оказывается на основании отдельного соглашения и, как правило, в рамках соответствующей доверенности</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div data-content='4' class="box__content">
+            <div class="box__content-wrapper">
+              <div class="box__content-inner">
+                <div class="box__content-text">
+                  <h2 class='box__content-text-heading minText'>описание</h2>
+                  <p class='box__content-text-par minText'>передача клиентом определенных юридических функций аутсорсеру</p>
+                  <p class='box__content-text-par minText'>передача аутсорсеру определенного функционала не предполагает трудоустройство последнего в штат клиента</p>
+                  <p class='box__content-text-par minText'>контроль клиентом за выполнением аутсорсером переданного функционала</p>
+
+                  <h2 class='box__content-text-heading minText'>состав услуги</h2>
+                  <ul class='list-reset box__content-text-list'>
+                    <li class='box__content-text-item minText'><b>подготовка юридической документации</b><i>: составление различной юридической документации; анализ и модификация существующих документов</i></li>
+                    <li class='box__content-text-item minText'><b>обучение</b><i>: чтение сотрудникам клиента научных лекций в области гражданского, трудового права</i></li>
+                    <li class='box__content-text-item minText'><b>корпоративное право и управление</b><i>: помощь клиенту в аспектах корпоративного права, включая формирование юридических структур, проведение общих собраний</i></li>
+                  </ul>
+                  <h2 class='box__content-text-heading minText'>примечание</h2>
+                  <p class='box__content-text-par minText'>услуга оказывается на основании и в объёме согласно отдельного соглашения</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box__close"></div>
+          <!--<div class="box__episodes">EPISODES</div>-->
+          <div class='box__smokebg'>
+
+          </div>
+          <div class='box__title'>
+            <h1 class='box__title-heading section-title' data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">услуги</h1>
+            <p class='box__title-par text' data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">перечень не является исчерпывающим</p>
+            <p class='box__title-par text' data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">в стоимость услуг включены все налоги</p>
+          </div>
+        </div>
+    </div>
+</section>
+
+            <section class="aboutHero">
+    <div class="container">
+        <h2 class="aboutHero__title section-title" id="about" data-aos="fade-up" data-aos-duration="1000">
+            Приветствую Вас на моём сайте! <br> Я — Кутявин Арсений, специализируюсь на оказании комплексных юридических услуг организациям <span>уже более 10 лет</span>
+        </h2>
+        <h3 class="aboutHero__subtitle section-subtitle" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1000">
+            Работая со мной, вы можете рассчитывать на профессиональное сопровождение в различных областях права.
+        </h3>
+        <div class="aboutHero__photos">
+            <div class="aboutHero__photos-content photoA">
+                <picture>
+                  <source srcset="img/photoA.webp" type="image/webp">
+                  <img loading="lazy" src="img/photoA.jpg" class="aboutHero__photoA-image" alt="photoA">
+                </picture>
+            </div>
+            <div class="aboutHero__photos-content photoB">
+                <picture>
+                  <source srcset="img/photoB.webp" type="image/webp">
+                  <img loading="lazy" src="img/photoB.jpg" class="aboutHero__photoB-image" alt="PhotoB">
+                </picture>
+                <picture>
+                    <source srcset="img/photoC.webp" type="image/webp">
+                    <img loading="lazy" src="img/photoC.jpg" class="aboutHero__photoBB-image" alt="PhotoBB">
+                </picture>
+            </div>
+        </div>
+        <div class="aboutHero__text">
+            <div class="aboutHero__text-title section-subtitle">Немного обо мне</div>
+            <div class="aboutHero__text-subtitle text">
+                <p>Я являюсь юристом с профессиональным образованием в области гражданско-правовых и уголовно-правовых специализаций. Получив высшее образование в ГОУ ВПО «КГУ им. В. И. Ульянова-Ленина» (ныне ФГАОУ ВО «Казанский (Приволжский) федеральный университет») в 2008 году, я работал в различных сферах юриспруденции, накопив значительный опыт.</p>
+                <p>Я специализируюсь в областях поставок, строительства, производства, представительства в судах, а также в аутсорсинге юридических услуг, связанных с трудовым правом, охраной труда, делопроизводством и другими. Мой опыт позволяет мне предоставлять высококачественную поддержку в области юриспруденции. Я готов осуществлять оказание услуг на Вашей территории, чтобы удовлетворить ваши потребности в юридических услугах.</p>
+                <p>Я понимаю, что каждая организация имеет свои уникальные потребности, поэтому внимательно слушаю и адаптирую свои услуги под каждого клиента. Если вы ищете надежного и опытного юридического партнера, который поможет вам обеспечить правовую безопасность вашего бизнеса, обращайтесь ко мне. Я предлагаю индивидуальный подход, профессиональные решения и стратегическое сопровождение, чтобы достичь вашей цели.</p>
+                <p>Моя цель — предоставлять качественные юридические услуги для юридических лиц, помогая им справиться с гражданско-правовыми вопросами. Если вам требуется надежный и опытный юрист, готовый помочь вам в ваших потребностях, не стесняйтесь обращаться ко мне. С нетерпением жду возможности помочь вам защитить ваши интересы и обеспечить правовую безопасность вашего бизнеса.</p>
+                <button class="btn-reset btn-more">Узнать больше</button>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+            <section class="running">
+    <div class="running__content section-subtitle">
+        <span class="running__content-text">Консультации</span>
+        <span class="running__content-text">Договоры</span>
+        <span class="running__content-text">Претензии</span>
+        <span class="running__content-text">Представительство</span>
+        <span class="running__content-text">Сотрудничество</span>
+        <span class="running__content-text">Аутстаффинг</span>
+    </div>
+
+    <div class="running__content section-subtitle" aria-hidden="true">
+        <span class="running__content-text">Консультации</span>
+        <span class="running__content-text">Договоры</span>
+        <span class="running__content-text">Претензии</span>
+        <span class="running__content-text">Представительство</span>
+        <span class="running__content-text">Сотрудничество</span>
+        <span class="running__content-text">Аутстаффинг</span>
+    </div>
+</section>
+
+            <section class="exp">
+    <div class="container exp__content">
+        <div class="exp__content-title section-subtitle">
+            Мой общий стаж
+            <p class="exp__title-durationTotal section-subtitle"></p>
+        </div>
+        <div class="exp__content-list">
+            <div class="exp__list-item">
+                <div class="exp__item-title">Частная деятельность</div>
+                <div class="exp__item-subtitle">Юрист в сфере оказания юридических услуг бизнесу в различных областях права</div>
+                <div class="exp__item-time">
+                    <p class="exp__time-interval">
+                        <span class="startDate">янв 2020</span> — по <span class="endDate">настоящее</span> время ~
+                    </p>
+                    <p class="durationDate"></p>
+                </div>
+            </div>
+            <div class="exp__list-item">
+                <div class="exp__item-title">Бюджетная сфера <br> (Республиканский орган государственной власти)</div>
+                <div class="exp__item-subtitle">Консультант по юридическим вопросам</div>
+                <div class="exp__item-time">
+                    <p class="exp__time-interval">
+                        <span class="startDate">мар 2011</span> — <span class="endDate">дек 2020</span> ~
+                    </p>
+                    <p class="durationDate"></p>
+                </div>
+            </div>
+            <div class="exp__list-item">
+                <div class="exp__item-title">Частная организация в сфере производства</div>
+                <div class="exp__item-subtitle">Ведущий юрисконсульт</div>
+                <div class="exp__item-time">
+                    <p class="exp__time-interval">
+                        <span class="startDate">дек 2010</span> — <span class="endDate">мар 2011</span> ~
+                    </p>
+                    <p class="durationDate"></p>
+                </div>
+            </div>
+            <div class="exp__list-item">
+                <div class="exp__item-title">Частная организация в сфере продаж транспортных средств</div>
+                <div class="exp__item-subtitle">Юрисконсульт</div>
+                <div class="exp__item-time">
+                    <p class="exp__time-interval">
+                        <span class="startDate">дек 2009</span> — <span class="endDate">ноя 2010</span> ~
+                    </p>
+                    <p class="durationDate"></p>
+                </div>
+            </div>
+            <div class="exp__list-item">
+                <div class="exp__item-title">Бюджетная сфера <br> (Республиканский орган государственной власти)</div>
+                <div class="exp__item-subtitle">Юрист</div>
+                <div class="exp__item-time">
+                    <p class="exp__time-interval">
+                        <span class="startDate">мар 2007</span> — <span class="endDate">дек 2009</span> ~
+                    </p>
+                    <p class="durationDate"></p>
+                </div>
+            </div>
+            <div class="exp__list-item">
+                <div class="exp__item-title">Государственная организация <br> (Федеральный орган государственной власти)</div>
+                <div class="exp__item-subtitle">Юрист в сфере уголовного права</div>
+                <div class="exp__item-time">
+                    <p class="exp__time-interval">
+                        <span class="startDate">сен 2001</span> — <span class="endDate">янв 2007</span> ~
+                    </p>
+                    <p class="durationDate"></p>
+                </div>
+            </div>
+            <button class="btn-reset btn-more">Узнать больше</button>
+        </div>
+    </div>
+</section>
+
+            <section class="practice">
+    <div class="container practice__content">
+        <div class="practice__content-title section-subtitle">
+            Моя практика
+        </div>
+        <div class="swiper practice__swiper">
+          <div class="swiper-wrapper practice__wrapper">
+             <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content crash">
+                    <div class="practice__slide-desc" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">После возврата судом кассационной инстанции дела на новое рассмотрение суд подтвердил взаимозачет встречных требований, отказав конкурсному управляющему в признании данных сделок недействительными; сумма требований 1.930.987 рублей</div>
+                    <a href="https://kad.arbitr.ru/Document/Pdf/4c2a5d10-66a5-46c9-b181-9431e4fa1123/3e4a5e53-59a4-43a5-a42e-b9aa15df8a66/A65-32408-2019_20230418_Opredelenie.pdf?isAddStamp=True" target="_blank" class="practice__slide-link" data-swiper-parallax="-200" data-swiper-parallax-opacity="0.5">А65-32408/2019</a>
+                </div>
+             </div>
+             <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content loss">
+                    <div class="practice__slide-desc" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">За неисполнение гарантийных обязательств по договору подряда суд в пользу клиента взыскал с должника неустойку вплоть по день фактического исполнения обязательства, а также судебные расходы; сумма требований 571.200 рублей + 0,02% в день до исполнения; данное решение поддержано судами апелляционной и кассационной инстанций</div>
+                    <a href="https://kad.arbitr.ru/Document/Pdf/5ab31322-ad51-4ff5-af5f-a121796f3491/ab91f65c-d91d-4386-a4c1-2fa038fc10b3/A65-808-2023_20230329_Reshenie.pdf?isAddStamp=True" target="_blank" class="practice__slide-link" data-swiper-parallax="-200" data-swiper-parallax-opacity="0.5">A65-808/2023</a>
+                </div>
+             </div>
+             <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content crash">
+                    <div class="practice__slide-desc" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">В реестр требований кредиторов банкрота включены требования клиента на общую сумму 1.442.566 рублей</div>
+                    <a href="https://kad.arbitr.ru/Document/Pdf/fcd604f9-97b3-422c-94cf-685cbb46616e/361b8494-73d4-425c-a05e-97b5665b29ab/A65-4016-2021_20211214_Opredelenie.pdf?isAddStamp=True" target="_blank" class="practice__slide-link" data-swiper-parallax="-200" data-swiper-parallax-opacity="0.5">A65-4016/2021</a>
+                </div>
+             </div>
+             <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content protest">
+                    <div class="practice__slide-desc" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">Признаны незаконными бездействия должностных лиц судебных приставов по не возбуждению исполнительного производства по исполнительному листу и по не направлению заявителю копии соответствующиего постановления; суд обязал должностных лиц устранить допущенные нарушения в течение 10 дней со дня вступления судебного акта в законную силу</div>
+                    <a href="https://kad.arbitr.ru/Document/Pdf/32f7e4ca-bc6a-41bc-8a33-b27589fc2294/bb450632-cc31-4fec-801b-6cb1864af99c/A40-2919-2023_20230314_Reshenija_i_postanovlenija.pdf?isAddStamp=True" target="_blank" class="practice__slide-link" data-swiper-parallax="-200" data-swiper-parallax-opacity="0.5">A40-2919/2023</a>
+                </div>
+             </div>
+             <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content loss">
+                    <div class="practice__slide-desc" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">Суд апелляционной инстанции изменил решение суда первой инстанции, удовлетворив встречные требования клиента о взыскании с должника (истца по делу) сумму неустойки и в результате взаимозачета встречных требований в пользу клиента взыскано 188.330 рублей и 3.000 рублей возврата государственной пошлины</div>
+                    <a href="https://kad.arbitr.ru/Document/Pdf/d95486bc-2b21-4f45-b581-d1f105a84bc1/ab1da406-33de-4ffe-8754-3b1b8b36f4ed/A65-4037-2023_20231030_Postanovlenie_apelljacionnoj_instancii.pdf?isAddStamp=True" target="_blank" class="practice__slide-link" data-swiper-parallax="-200" data-swiper-parallax-opacity="0.5">A65-4037/2023</a>
+                </div>
+             </div>
+             <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content protest">
+                    <div class="practice__slide-desc" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">Признаны недействительным решение Отделения Пенсионного Фонда РФ о привлечении клиента к ответственности за совершение правонарушения в сфере законодательства РФ об индивидуальном учете в системе обязательного пенсионного страхования</div>
+                    <a href="https://kad.arbitr.ru/Document/Pdf/f5b67c3f-c2f1-463c-ac72-386f59a25dac/aa1f496d-2a1d-4fd2-80d4-556d8b865518/A65-15658-2022_20220922_Reshenie.pdf?isAddStamp=True" target="_blank" class="practice__slide-link" data-swiper-parallax="-200" data-swiper-parallax-opacity="0.5">A65-15658/2022</a>
+                </div>
+             </div>
+             <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content loss">
+                    <div class="practice__slide-desc" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">В связи с неисполнением ответчиком обязательств по договору подряда в пользу клиента взысканы суммы ущерба, неустойки и судебных расходов; общая взысканная сумма 677.067 рублей, а также 0,02% неустойки за каждый день просрочки</div>
+                    <a href="https://kad.arbitr.ru/Document/Pdf/609544d3-119a-4c80-8f06-4691feeee663/7d35b334-7b07-4146-8225-5d4117703a44/A65-16418-2023_20231009_Reshenie.pdf?isAddStamp=True" target="_blank" class="practice__slide-link" data-swiper-parallax="-200" data-swiper-parallax-opacity="0.5">A65-16418/2023</a>
+                </div>
+             </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev practice__btn"></div>
+        <div class="swiper-button-next practice__btn"></div>
+        <div class="practice__content-title section-subtitle">
+            Иная практика
+        </div>
+        <div class="swiper practice__swiper-other">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content">
+                    <div class="practice__slide-desc" data-swiper-parallax="-75" data-swiper-parallax-opacity="0.5">
+                        ВС РФ напомнил, когда собственник недвижимости не сможет выкупить землю под ней без торгов</div>
+                    <div class="practice__slide-link" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">
+                        Опр.от 14.12.2021 № 302-ЭС21-14414</div>
+                </div>
+            </div>
+            <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content">
+                    <div class="practice__slide-desc" data-swiper-parallax="-75" data-swiper-parallax-opacity="0.5">
+                        ВС РФ поправил суды, которые признали за застройщиком право передать объект в одностороннем порядке</div>
+                    <div class="practice__slide-link" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">
+                        Опр.от 12.10.2021 № 5-КГ21-106-К2</div>
+                </div>
+            </div>
+            <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content">
+                    <div class="practice__slide-desc" data-swiper-parallax="-75" data-swiper-parallax-opacity="0.5">
+                        Условие договора розничной КП товара о праве продавца отменить заказ в случае отсутствия товара на складе, противоречит ЗПП</div>
+                    <div class="practice__slide-link" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">
+                        Опр.от 04.04.2023 № 49-КГ22-28-К6</div>
+                </div>
+            </div>
+            <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content">
+                    <div class="practice__slide-desc" data-swiper-parallax="-75" data-swiper-parallax-opacity="0.5">
+                        ВС РФ поправил суды, которые снизили для страховой компании потребительскую неустойку в 22 раза</div>
+                    <div class="practice__slide-link" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">
+                        Опр.от 09.11.2021 N 5-КГ21-123-К2</div>
+                </div>
+            </div>
+            <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content">
+                    <div class="practice__slide-desc" data-swiper-parallax="-75" data-swiper-parallax-opacity="0.5">
+                        Срок уведомления об увольнении начинает течь после его получения, а не отправки (Второй касс.суд общей юрисдикции)</div>
+                    <div class="practice__slide-link" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">
+                        Опр.от 28.03.2023 № 88-7745/2023</div>
+                </div>
+            </div>
+            <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content">
+                    <div class="practice__slide-desc" data-swiper-parallax="-75" data-swiper-parallax-opacity="0.5">
+                        ВС РФ: нельзя взыскать с работника неосновательное обогащение</div>
+                    <div class="practice__slide-link" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">
+                        Опр.от 17.02.2020 № 85-КГ19-12</div>
+                </div>
+            </div>
+            <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content">
+                    <div class="practice__slide-desc" data-swiper-parallax="-75" data-swiper-parallax-opacity="0.5">
+                        ВС РФ: непогашенные долги продавца не влекут недействительности договора купли-продажи имущества</div>
+                    <div class="practice__slide-link" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">
+                        Опр.от 26.11.2019 № 42-КГ19-4</div>
+                </div>
+            </div>
+            <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content">
+                    <div class="practice__slide-desc" data-swiper-parallax="-75" data-swiper-parallax-opacity="0.5">
+                        ВС РФ разъяснил судам, сколько должна длиться плановая проверка юрлица с филиалами</div>
+                    <div class="practice__slide-link" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">
+                        Опр.от 28.02.2020 № 306-ЭС19-19540</div>
+                </div>
+            </div>
+            <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content">
+                    <div class="practice__slide-desc" data-swiper-parallax="-75" data-swiper-parallax-opacity="0.5">
+                        Практика в пользу работодателя: не должно быть штрафа за самостоятельное дополнение СЗВ-М (Верховный суд РФ)</div>
+                    <div class="practice__slide-link" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">
+                        Опр.от 20.12.2019 № 306-ЭС19-23114</div>
+                </div>
+            </div>
+            <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content">
+                    <div class="practice__slide-desc" data-swiper-parallax="-75" data-swiper-parallax-opacity="0.5">
+                        Деньги на счете мобильного телефона нельзя арестовать (Верховный суд РФ)</div>
+                    <div class="practice__slide-link" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">
+                        опр.от 28.10.2015 № 84-КГ15-9</div>
+                </div>
+            </div>
+            <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content">
+                    <div class="practice__slide-desc" data-swiper-parallax="-75" data-swiper-parallax-opacity="0.5">
+                        ВС РФ подсказал, что учесть при расчете компенсации за использование чужого товарного знака</div>
+                    <div class="practice__slide-link" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">
+                        Опр.от 26.01.2021 № 310-ЭС20-9768</div>
+                </div>
+            </div>
+            <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content">
+                    <div class="practice__slide-desc" data-swiper-parallax="-75" data-swiper-parallax-opacity="0.5">
+                        Составление товаросопроводительных документов является обязанностью продавца (Верховный суд РФ)</div>
+                    <div class="practice__slide-link" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">
+                        Опр.от 03.12.2019 № 304-ЭС19-21656</div>
+                </div>
+            </div>
+            <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content">
+                    <div class="practice__slide-desc" data-swiper-parallax="-75" data-swiper-parallax-opacity="0.5">
+                        Арбитражный суд Восточно-Сибирского округа: банк правмерно наказан за машинописную «галочку» в кредитном договоре с потребителем</div>
+                    <div class="practice__slide-link" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">
+                        пост.от 20.04.2018 №А19-12781/2017</div>
+                </div>
+            </div>
+            <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content">
+                    <div class="practice__slide-desc" data-swiper-parallax="-75" data-swiper-parallax-opacity="0.5">
+                        ВС РФ пояснил, в какой срок нужно подать иск за потерю груза перевозчиком</div>
+                    <div class="practice__slide-link" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">
+                        Опр.от 25.01.2021 № 305-ЭС20-14437</div>
+                </div>
+            </div>
+            <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content">
+                    <div class="practice__slide-desc" data-swiper-parallax="-75" data-swiper-parallax-opacity="0.5">
+                        ВС РФ: продавец должен вернуть деньги, если программное обеспечение товара перестало работать</div>
+                    <div class="practice__slide-link" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">
+                        Опр.от 15.12.2020 № 46-КГ20-19-К6</div>
+                </div>
+            </div>
+            <div class="swiper-slide practice__slide">
+                <div class="practice__slide-content">
+                    <div class="practice__slide-desc" data-swiper-parallax="-75" data-swiper-parallax-opacity="0.5">
+                        СНТ не вправе в одностороннем порядке отключать энергию, кроме случае, предусмотренных в законе или договоре (Верховный суд РФ)</div>
+                    <div class="practice__slide-link" data-swiper-parallax="-100" data-swiper-parallax-opacity="0.5">
+                        Пост.от 25.10.2016 № 6-КГ16-16</div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>
+
+            <section class="form" id="form">
+    <div class="container form__container">
+        <form action="#" class="form__contact">
+            <h3 class="form__contact-title section-title">
+                Если у Вас имеются вопросы, <br> можете, заполнив данную форму, отправить их мне
+            </h3>
+            <h4 class="form__contact-subtitle section-subtitle" data-aos="zoom-in" data-aos-delay="1000">
+                Поля для ввода Вашего имени и E-mail обязательны для заполнения (*) <br>
+                <!--<span class="form__contact-subtitle--span">Укажите пожайлуста Ваш контактный телефон и/или Email</span>-->
+            </h4>
+            <div class="form__contact-fill text">
+                <input type="text" name="Имя" class="input-reset form__fill-input" id="inputName">
+                <label class="form__fill-label" id="labelName">Укажите Ваше имя<span> *</span></label>
+            </div>
+            <div class="form__contact-fill text">
+                <input type="tel" name="Телефон" class="input-reset form__fill-input" id="inputTel">
+                <label class="form__fill-label" id="labelTel">Укажите Ваш телефон</label>
+            </div>
+            <div class="form__contact-fill text">
+                <input type="email" name="Эл.почта" class="input-reset form__fill-input" id="inputEmail">
+                <label class="form__fill-label" id="labelEmail">Укажите Ваш Email<span> *</span></label>
+            </div>
+            <textarea name="Сообщение" class="form__contact-fill--textarea text"></textarea>
+            <p class="form__contact-accords minText">
+                Нажимая на кнопку «Отправить», <br> Вы соглашаетесь с <a href="confid.html" class="form__accords-confid minText">политикой кофиденциальности</a> и принимаете условия <a href="user.html" class="form__accords-user minText">пользовательского соглашения</a>
+            </p>
+            <button type="submit" class="btn-reset form__contact-btn text">Отправить</button>
+            <!--data-graph-path="contact"-->
+        </form>
+    </div>
+
+</section>
+
+        </main>
+        <footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__top-offer">
+                <h3 class="footer__offer-title section-title" data-aos="zoom-out" data-aos-duration="2000">Давайте поработаем вместе!</h3>
+                <svg class="footer__offer-indicator">
+                  <use class="first" xlink:href="img/sprite.svg#indicator"></use>
+                  <use class="second" xlink:href="img/sprite.svg#indicator"></use>
+                </svg>
+                <a href="tel:+79172874342" class="footer__offer-email text">
+                    <svg class="text-stroke">
+                        <text x="20" y="25">8(917)287-43-42</text>
+                    </svg>
+                </a>
+            </div>
+            <div class="footer__top-invite text" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="2000">
+                С удовольствием помогу защитить ваши интересы и обеспечить успех вашего предприятия.
+            </div>
+
+          </div>
+          <div class="container footer__bottom">
+            <div class="footer__bottom-svg logo-svg">
+                <svg>
+                  <use xlink:href="img/sprite.svg#logo-favicon"></use>
+                </svg>
+            </div>
+            <div class="footer__bottom-text text">
+                ArsenalLawer
+            </div>
+          </div>
+  </div>
+</footer>
+
+        <div class="graph-modal">
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="contact">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+        <div class="logo-svg">
+            <svg>
+              <use xlink:href="img/sprite.svg#logo-favicon"></use>
+            </svg>
+        </div>
+        <h1 class="modal__content-title text">
+            Спасибо за сообщение! <br> В ближайшее время я отвечу на Ваши вопросы
+        </h1>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+</body>
+
+</html>
