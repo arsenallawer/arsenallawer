@@ -9,7 +9,7 @@
   --color-grey: #f5f5f5;
   --color-greyDark: #a6a6a6;
   --color-greyLine: #d9d9d9;
-  --color-blueNavy: #4FA2FC;
+  --color-blueNavy: #4fa2fc;
   --color-blueBereley: #0D2C54;
   --color-blueGlaucous: #6B7FD7;
   --color-redBright: #AD0000;
@@ -748,6 +748,30 @@ input::-webkit-inner-spin-button {
   }
 }
 
+.hero {
+  background: url("../img/svg/logoBg.svg") no-repeat;
+  background-size: 65%;
+  -webkit-animation: fadeBg 2s cubic-bezier(0.19, 0.75, 0.36, 1.65) 2.5s both;
+  animation: fadeBg 2s cubic-bezier(0.19, 0.75, 0.36, 1.65) 2.5s both;
+}
+
+@-webkit-keyframes fadeBg {
+  from {
+    background-position: center right -200%;
+  }
+  to {
+    background-position: center right -13%;
+  }
+}
+
+@keyframes fadeBg {
+  from {
+    background-position: center right -200%;
+  }
+  to {
+    background-position: center right -13%;
+  }
+}
 .hero__title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1588,7 +1612,7 @@ input::-webkit-inner-spin-button {
 .practice__slide::before {
   content: "";
   position: absolute;
-  bottom: 60px;
+  bottom: 70px;
   width: 100%;
   height: 1px;
   background-color: var(--color-white);
@@ -1927,6 +1951,216 @@ input::-webkit-inner-spin-button {
   margin: 0 auto;
 }
 
+.callBackButton {
+  position: fixed;
+  width: 8vmin;
+  height: 8vmin;
+  bottom: 10vmin;
+  right: 7vmin;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: var(--color-blueNavy);
+  -webkit-box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3);
+  box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3);
+  text-align: center;
+  opacity: 0;
+  z-index: 10;
+  -webkit-transition: var(--time) ease-in-out;
+  transition: var(--time) ease-in-out;
+  -webkit-animation: hoverCallBack linear 1s infinite;
+  animation: hoverCallBack linear 1s infinite;
+}
+.callBackButton:hover {
+  background: var(--color-black);
+  border: 2px solid var(--color-blueNavy);
+}
+.callBackButton .callBack_btn-txt {
+  position: relative;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+}
+.callBackButton .callBack_btn-txt:after {
+  content: url("../img/svg/call.svg");
+  display: block;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: calc(100% - 3vmin);
+  height: calc(100% - 3vmin);
+  opacity: 1;
+  -webkit-transition: var(--time) ease-in-out;
+  transition: var(--time) ease-in-out;
+  -webkit-animation: shake 1200ms ease infinite;
+  animation: shake 1200ms ease infinite;
+}
+@media (max-width: 576px) {
+  .callBackButton .callBack_btn-txt:after {
+    top: 10%;
+    left: 10%;
+  }
+}
+.callBackButton .callBack_btn-txt:hover:after {
+  opacity: 0;
+}
+.callBackButton .callBack_btn-txt span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 1.2vmin;
+  color: var(--color-blueNavy);
+  text-transform: uppercase;
+  opacity: 0;
+  -webkit-transition: var(--time) ease-in-out;
+  transition: var(--time) ease-in-out;
+}
+@media (max-width: 576px) {
+  .callBackButton .callBack_btn-txt span {
+    font-size: 1.8vmin;
+  }
+}
+.callBackButton .callBack_btn-txt:hover span {
+  opacity: 1;
+}
+@media (max-width: 576px) {
+  .callBackButton {
+    width: 12vmin;
+    height: 12vmin;
+  }
+}
+
+@-webkit-keyframes hoverCallBack {
+  0% {
+    -webkit-box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 0 rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2);
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 0 rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2);
+  }
+  40% {
+    -webkit-box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 15px rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2);
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 15px rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2);
+  }
+  80% {
+    -webkit-box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 26.7px rgba(56, 163, 253, 0.067);
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 26.7px rgba(56, 163, 253, 0.067);
+  }
+  100% {
+    -webkit-box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 40px rgba(56, 163, 253, 0);
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 40px rgba(56, 163, 253, 0);
+  }
+}
+
+@keyframes hoverCallBack {
+  0% {
+    -webkit-box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 0 rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2);
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 0 rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2);
+  }
+  40% {
+    -webkit-box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 15px rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2);
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 15px rgba(56, 163, 253, 0.2), 0 0 0 0 rgba(56, 163, 253, 0.2);
+  }
+  80% {
+    -webkit-box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 26.7px rgba(56, 163, 253, 0.067);
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 26.7px rgba(56, 163, 253, 0.067);
+  }
+  100% {
+    -webkit-box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 40px rgba(56, 163, 253, 0);
+    box-shadow: 0 8px 10px rgba(56, 163, 253, 0.3), 0 0 0 30px rgba(56, 163, 253, 0), 0 0 0 40px rgba(56, 163, 253, 0);
+  }
+}
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+  10% {
+    -webkit-transform: rotateZ(-30deg);
+    transform: rotateZ(-30deg);
+  }
+  20% {
+    -webkit-transform: rotateZ(15deg);
+    transform: rotateZ(15deg);
+  }
+  30% {
+    -webkit-transform: rotateZ(-10deg);
+    transform: rotateZ(-10deg);
+  }
+  40% {
+    -webkit-transform: rotateZ(7.5deg);
+    transform: rotateZ(7.5deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(-6deg);
+    transform: rotateZ(-6deg);
+  }
+  60% {
+    -webkit-transform: rotateZ(5deg);
+    transform: rotateZ(5deg);
+  }
+  70% {
+    -webkit-transform: rotateZ(-4.28571deg);
+    transform: rotateZ(-4.28571deg);
+  }
+  80% {
+    -webkit-transform: rotateZ(3.75deg);
+    transform: rotateZ(3.75deg);
+  }
+  90% {
+    -webkit-transform: rotateZ(-3.33333deg);
+    transform: rotateZ(-3.33333deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes shake {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+  10% {
+    -webkit-transform: rotateZ(-30deg);
+    transform: rotateZ(-30deg);
+  }
+  20% {
+    -webkit-transform: rotateZ(15deg);
+    transform: rotateZ(15deg);
+  }
+  30% {
+    -webkit-transform: rotateZ(-10deg);
+    transform: rotateZ(-10deg);
+  }
+  40% {
+    -webkit-transform: rotateZ(7.5deg);
+    transform: rotateZ(7.5deg);
+  }
+  50% {
+    -webkit-transform: rotateZ(-6deg);
+    transform: rotateZ(-6deg);
+  }
+  60% {
+    -webkit-transform: rotateZ(5deg);
+    transform: rotateZ(5deg);
+  }
+  70% {
+    -webkit-transform: rotateZ(-4.28571deg);
+    transform: rotateZ(-4.28571deg);
+  }
+  80% {
+    -webkit-transform: rotateZ(3.75deg);
+    transform: rotateZ(3.75deg);
+  }
+  90% {
+    -webkit-transform: rotateZ(-3.33333deg);
+    transform: rotateZ(-3.33333deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+}
 .aboutHero {
   background-color: var(--color-white);
 }
@@ -2213,6 +2447,13 @@ input::-webkit-inner-spin-button {
   margin-right: 5px;
 }
 
+.graph-modal__container {
+  background: url("../img/svg/logoBgLigth.svg") no-repeat;
+  background-color: var(--color-black);
+  background-size: 65%;
+  background-position: center right -13%;
+}
+
 .graph-modal__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2230,6 +2471,32 @@ input::-webkit-inner-spin-button {
 .modal__content-title {
   text-align: center;
   line-height: 3vmin;
+  color: var(--color-white);
+}
+
+.form__callBack h3 {
+  color: var(--color-white);
+  font-size: 2.5vmin;
+}
+.form__callBack .text {
+  font-size: 2vmin;
+}
+@media (max-width: 576px) {
+  .form__callBack .text {
+    font-size: 3vmin;
+  }
+}
+.form__callBack input {
+  border: 1px solid var(--color-white);
+}
+.form__callBack label {
+  top: 10px;
+  color: var(--color-white);
+}
+.form__callBack input.focus-visible + .form__fill-label, .form__callBack input:hover + .form__fill-label {
+  background-color: var(--color-black);
+}
+.form__callBack p {
   color: var(--color-white);
 }
 

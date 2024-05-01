@@ -26,7 +26,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_box__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/box */ "./src/js/components/box.js");
 /* harmony import */ var _components_box__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_box__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/form */ "./src/js/components/form.js");
-/* harmony import */ var _components_form__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_form__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_exp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/exp */ "./src/js/components/exp.js");
 /* harmony import */ var _components_exp__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_exp__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _components_footer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/footer */ "./src/js/components/footer.js");
@@ -106,9 +105,9 @@ console.log((0,_functions_mobile_check__WEBPACK_IMPORTED_MODULE_0__.mobileCheck)
 // import 'simplebar';
 
 // Подключение плагина для позиционирования тултипов
-// import { createPopper, right} from '@popperjs/core';
-// createPopper(el, tooltip, {
-//   placement: 'right'
+// import { createPopper, top} from '@popperjs/core';
+// createPopper('.callBack_btn', '#callBack', {
+//   placement: 'top'
 // });
 
 // Подключение свайпера
@@ -166,10 +165,36 @@ const rules1 = [{
     errorMessage: 'Заполните E-mail полностью'
   }]
 }];
+const rules2 = [{
+  ruleSelector: '#callBackInputName',
+  rules: [{
+    rule: 'minLength',
+    value: 3,
+    errorMessage: 'Не менее 3 символов'
+  }, {
+    rule: 'required',
+    value: true,
+    errorMessage: 'Заполните имя!'
+  }]
+}, {
+  ruleSelector: '#callBackInputTel',
+  //tel: true,
+  // telError: 'Введите корректный номер телефона!',
+  rules: [{
+    rule: 'minLength',
+    value: 10,
+    errorMessage: 'Заполните номер телефона полностью'
+  }, {
+    rule: 'required',
+    value: true,
+    errorMessage: 'Укажите Ваш контактный телефон!'
+  }]
+}];
 const afterForm = () => {
   console.log('Произошла отправка сообщения');
 };
 (0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_3__.validateForms)('.form__contact', rules1, afterForm);
+(0,_functions_validate_forms__WEBPACK_IMPORTED_MODULE_3__.validateForms)('.form__callBack', rules2, afterForm);
 
 //import IMask from 'imask';
 
@@ -486,12 +511,16 @@ observer.observe(emailText);
 /*!***********************************!*\
   !*** ./src/js/components/form.js ***!
   \***********************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var graph_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graph-modal */ "./node_modules/graph-modal/src/graph-modal.js");
 //console.log('form');
 
 //if (window.location.pathname.includes('index.html')) {
 //if (window.location.pathname === '/index.html') {
+
 
 let contactForm = document.querySelector('.form__contact'),
   inputName = document.querySelector('#inputName'),
@@ -502,13 +531,21 @@ let contactForm = document.querySelector('.form__contact'),
   labelTel = document.querySelector('#labelTel'),
   labelEmail = document.querySelector('#labelEmail'),
   formFills = document.querySelectorAll('.form__contact-fill'),
-  formBtn = document.querySelector('.form__contact-btn');
+  formBtn = document.querySelector('.form__contact-btn'),
+  callBackButton = document.querySelector('.callBackButton'),
+  callBackBtn = document.querySelector('.callBackBtn'),
+  callBackLabelName = document.querySelector('#callBackLabelName'),
+  callBackInputName = document.querySelector('#callBackInputName'),
+  callBackLabelTel = document.querySelector('#callBackLabelTel'),
+  callBackInputTel = document.querySelector('#callBackInputTel');
+let flag;
 for (let fill of formFills) {
   let input = fill.querySelector('.form__fill-input'),
     label = fill.querySelector('.form__fill-label'),
     labelContent = label.textContent,
     labelColor = window.getComputedStyle(label).color;
-  formBtn.disabled = true, formBtn.style.color = '#000';
+  formBtn.disabled = true;
+  formBtn.style.color = '#000';
 
   //inputTel.addEventListener('focus', () => {
   //    let mask = IMask(inputTel, {
@@ -529,13 +566,25 @@ for (let fill of formFills) {
   //    });
   //});
 
-  input.addEventListener('input', () => {
+  input.addEventListener('input', el => {
     //let labelContent = label.textContent,
     //    labelColor = window.getComputedStyle(label).color;
     if (inputName.value !== '' && inputTel.value !== '' || inputEmail.value !== '') {
       formBtn.style.cursor = 'pointer', formBtn.disabled = false, formBtn.style.backgroundColor = '#1C008A', formBtn.style.color = '#fff';
     } else {
       formBtn.style.cursor = 'not-allowed', formBtn.disabled = true, formBtn.style.backgroundColor = '#a6a6a6', formBtn.style.color = '#000';
+    }
+    ;
+    if (callBackInputName.value !== '' && flag && callBackInputTel.value.replace(/\D/g, '').length === 11) {
+      callBackBtn.style.cursor = 'pointer';
+      callBackBtn.disabled = false;
+      callBackBtn.style.backgroundColor = '#1C008A';
+      callBackBtn.style.color = '#fff';
+    } else {
+      callBackBtn.style.cursor = 'not-allowed';
+      callBackBtn.disabled = true;
+      callBackBtn.style.backgroundColor = '#a6a6a6';
+      callBackBtn.style.color = '#000';
     }
     ;
     if (input.value.trim() !== '') {
@@ -546,18 +595,17 @@ for (let fill of formFills) {
     ;
     if (/\d/.test(inputName.value) || /[!@#$%^&*(),.?":{}|<>]/.test(inputName.value)) {
       labelName.textContent = 'Имя не может содержать цифры и спец.символы';
-      //label.style.color = '#AD0000'
     } else {
       label.textContent = labelContent;
-      //label.style.color = labelColor;
     }
-
-    //if (inputTel.value.replace(/\D/g, '').length < 8) {
-    //    setTimeout(() => {
-    //        labelTel.textContent = 'Введите не менее 10 цифр';
-    //        label.style.color = '#AD0000'
-    //    }, 1000)
-    //}
+    if (/\d/.test(callBackInputName.value) || /[!@#$%^&*(),.?":{}|<>]/.test(callBackInputName.value)) {
+      callBackLabelName.textContent = 'Только буквы!';
+      flag = false;
+    } else {
+      callBackLabelName.textContent = labelContent;
+      flag = true;
+    }
+    ;
 
     //if (!/^\w+@\w+\.\w{2,3}$/.test(inputEmail.value)) {
     //    labelEmail.textContent = 'Введите в формате example@mail.com; не более 3 символов после точки';
@@ -573,8 +621,20 @@ for (let fill of formFills) {
     label.classList.remove('input-fixed', 'minText');
     formBtn.style.cursor = 'not-allowed', formBtn.disabled = true, formBtn.style.backgroundColor = '#a6a6a6', formBtn.style.color = '#000';
   });
+  document.querySelector('.form__callBack').addEventListener('submit', ev => {
+    ev.preventDefault();
+    callBackLabelName.classList.remove('input-fixed', 'minText');
+    callBackLabelTel.classList.remove('input-fixed', 'minText');
+    callBackLabelName.textContent = labelContent;
+    callBackBtn.style.cursor = 'not-allowed', callBackBtn.disabled = true, callBackBtn.style.backgroundColor = '#a6a6a6', callBackBtn.style.color = '#000';
+  });
 }
 ;
+callBackButton.addEventListener('click', e => {
+  e.preventDefault();
+  const modal = new graph_modal__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  modal.open('callBack');
+});
 //}
 
 /***/ }),
@@ -840,6 +900,10 @@ btnMore.forEach(el => {
   });
 });
 
+setTimeout(function () {
+  document.querySelector('.callBackButton').style.opacity = '1';
+}, 7000);
+
 /***/ }),
 
 /***/ "./src/js/functions/mobile-check.js":
@@ -887,8 +951,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var graph_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! graph-modal */ "./node_modules/graph-modal/src/graph-modal.js");
 
 
-
-//const modal = new GraphModal();
 
 const validateForms = (selector, rules, afterSend) => {
   const form = document?.querySelector(selector);
